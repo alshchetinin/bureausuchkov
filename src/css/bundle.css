@@ -1,0 +1,11 @@
+@import "swiper/swiper-bundle.css";
+@import "fonts.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+ body {
+  @apply text-slate-800 ;
+ }
+}
