@@ -5,7 +5,66 @@
 @tailwind utilities;
 
 @layer base {
- body {
-  @apply text-slate-800 ;
- }
+  *::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+
+  body {
+    @apply text-slate-800 max-w-[1920px] m-auto;
+  }
+
+
+
+  [type="submit"] {
+    @apply block px-6 h-12 text-sm font-semibold text-center  rounded-xl lg:rounded-lg text-white bg-blue-600 cursor-pointer;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  input[type="url"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="search"],
+  input[type="tel"],
+  select,
+  select[multiple] {
+    @apply h-12 rounded-lg  w-full text-slate-800 border-r-gray-300;
+  }
+
+  textarea {
+    @apply rounded-lg  border-none w-full text-slate-800;
+  }
+  input[type="checkbox"] {
+    @apply h-4 rounded-sm w-4  border-none text-slate-800 mr-2;
+  }
+  .inline-form form {
+    @apply flex lg:space-x-4 flex-col lg:flex-row space-y-5;
+  }
+
+
+}
+
+@layer components {
+  .fillter_item {
+    opacity: 0.6;
+  }
+  .fillter_active {
+    opacity: 1;
+  }
+
+  .project_content_tab,
+  .content_tab {
+    display: none;
+  }
+
+  .project_content_tab-active,
+  .content_tab-active {
+    display: grid;
+  }
 }

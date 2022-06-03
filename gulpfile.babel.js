@@ -18,7 +18,7 @@ export const styles = () => {
   const plugins = [
     require("tailwindcss"),
     require("rfs")({
-      baseValue: 20, // Default: 20 (which is 1.25rem)
+      baseValue: 16, // Default: 20 (which is 1.25rem)
       unit: "rem", // Default: rem
       breakpoint: 1920, // Default: 1200
       breakpointUnit: "px", // Default: px
@@ -136,8 +136,8 @@ export const deploy = () => {
   return src("bundled/").pipe(
     rsync({
       root: "bundled/",
-      hostname: "promikl_evplus@promikl.beget.tech",
-      destination: "wp-content/themes/ev-theme/",
+      hostname: "	ch21739@92.53.96.37",
+      destination: "wordpress_hlsz3/public_html/wp-content/themes/bureausuchkov",
       // clean: true, // Mirror copy with file deletion
       include: [
         /* '*.htaccess' */
